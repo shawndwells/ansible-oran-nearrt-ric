@@ -1,0 +1,16 @@
+---
+required_packages:
+  - swig
+  - libsctp-dev
+  - libgtest-dev
+  - cmake-curses-gui
+  - libpcre2-dev
+  - python3
+  - python3-dev
+  - cmake 
+  - autotools-dev
+  - automake
+  - bison
+  - python3
+  - gcc-10
+  - libyaml-cpp-dev
