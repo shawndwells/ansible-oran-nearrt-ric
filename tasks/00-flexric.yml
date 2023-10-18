@@ -1,5 +1,3 @@
-#!/bin/bash
-
 - name: Check if FlexRIC GitHub was previously cloned
   stat: path={{ ansible_env.HOME}/src/flexric
   register: flexric_git_dir
