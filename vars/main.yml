@@ -1,2 +1,28 @@
 ---
 # vars file for missionit-oran
+#
+
+
+
+############################################################
+# DEFAULT VALUES
+#
+# Settings below reflect sane defaults and do not require
+# modification for a working system. They are exposed
+# to support more complicated deployments than a quick
+# test cluster
+
+
+############################################################
+# PLMN
+############################################################
+# The international test PLMN is 001/01 and
+# the international private network PLMN is 999/99.
+# 
+# You should stick to using either of these PLMNs unless
+# you have been issued a PLMN by your national regulator.
+#
+# This PLMN will need to be configured in your eNB.
+#
+plmn_mc: 001
+plmn_mnc: 01
