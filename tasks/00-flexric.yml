@@ -1,3 +1,4 @@
+---
 - name: Check if FlexRIC GitHub was previously cloned
   stat: path={{ ansible_env.HOME}/src/flexric
   register: flexric_git_dir
@@ -6,7 +7,9 @@
 - name: Clone FlexRIC repository
   git:
     repo: https://gitlab.eurecom.fr/mosaic5g/flexric.git
-    dest: "{{ ansible_env.HOME }}/src/flexric" accept_hostkey=yes force=yes
+    dest: "{{ ansible_env.HOME }}/src/flexric"
+    accept_hostkey: yes
+    force: yes
     clone: true
     single_branch: yes
     version: e2ap-v2
@@ -28,7 +31,7 @@
 - name: Apply flexric.patch to FlexRIC source
   shell: git apply -v flexric.patch
   args:
-    chdir: {{ ansible_env.HOME }}/src/flexric
+    chdir: "{{ ansible_env.HOME }}"/src/flexric
 
 # mkdir build
 - name: Create the FlexRIC build directory
