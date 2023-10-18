@@ -68,3 +68,8 @@
           #NUM_THREADS: "{{ num_threads }}"
           CC: gcc-10
 
+    ## ctest
+    - name: FlexRIC - Run All-in-One Installation Test
+      shell: ctest
+      args:
+        chdir: "{{ ansible_env.HOME }}/src/flexric/build"
